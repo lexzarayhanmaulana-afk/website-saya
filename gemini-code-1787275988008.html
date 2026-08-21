@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Faiz Rahnatulloh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9fb;
+            color: #333;
+        }
+        
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav .logo { font-weight: bold; font-size: 1.2rem; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; transition: 0.3s; }
+        nav ul li a:hover { color: #3498db; }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://picsum.photos/1200/600') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        header p { font-size: 1.2rem; margin-bottom: 20px; color: #bdc3c7; }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background-color: #2980b9; }
+
+        /* Container Umum */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h2 { border-bottom: 2px solid #3498db; padding-bottom: 10px; color: #2c3e50; margin-bottom: 20px; }
+
+        /* Skills Grid */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+        .skill-grid li {
+            background: #e7f3fe;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: bold;
+            border-bottom: 4px solid #3498db;
+        }
+
+        /* Projects Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #fdfdfd;
+            border: 1px solid #e1e1e1;
+            border-radius: 6px;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .project-card h3 { color: #2c3e50; margin-bottom: 10px; }
+
+        /* Contact Form */
+        form { display: flex; flex-direction: column; }
+        form label { margin-top: 10px; font-weight: bold; }
+        form input, form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        form button {
+            margin-top: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form button:hover { background: #2980b9; }
+
+        /* Footer */
+        footer { text-align: center; padding: 30px; background: #2c3e50; color: white; margin-top: 40px; }
+        .social-links { margin-bottom: 15px; }
+        .social-links a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        .social-links a:hover { color: #3498db; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav>
+        <div class="logo">Faiz Rahnatulloh</div>
+        <ul>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Utama -->
+    <header>
+        <h1>Halo, Saya Faiz Rahnatulloh</h1>
+        <p>Pengembang Web & Kreatif Digital</p>
+        <a href="#projects" class="btn">Lihat Portofolio</a>
+    </header>
+
+    <!-- Tentang Saya -->
+    <section id="about" class="container">
+        <h2>Tentang Saya</h2>
+        <p>Halo! Nama saya Faiz Rahnatulloh. Saya adalah seorang individu yang antusias dalam dunia pengembangan web dan teknologi. Saya fokus menciptakan solusi digital yang fungsional, responsif, dan memiliki antarmuka yang ramah pengguna.</p>
+    </section>
+
+    <!-- Keahlian -->
+    <section id="skills" class="container">
+        <h2>Keahlian</h2>
+        <ul class="skill-grid">
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript Dasar</li>
+            <li>Responsive Design</li>
+            <li>UI/UX Design</li>
+            <li>Git & GitHub</li>
+            <li>Problem Solving</li>
+        </ul>
+    </section>
+
+    <!-- Proyek -->
+    <section id="projects" class="container">
+        <h2>Proyek Pilihan</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Website Company Profile</h3>
+                <p>Membuat profil perusahaan fiktif yang responsif dan modern menggunakan HTML dan CSS.</p>
+            </div>
+            <div class="project-card">
+                <h3>Aplikasi To-Do List</h3>
+                <p>Aplikasi pengelola tugas harian interaktif yang dibuat dengan bahasa pemrograman JavaScript.</p>
+            </div>
+            <div class="project-card">
+                <h3>Landing Page Produk</h3>
+                <p>Halaman promosi produk digital dengan tata letak yang menarik dan fokus pada konversi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="container">
+        <h2>Kontak Saya</h2>
+        <p>Punya pertanyaan atau ingin bekerja sama? Kirimkan pesan melalui formulir di bawah ini:</p>
+        <form action="#" method="POST">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda..." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda..." required>
+
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2026 Faiz Rahnatulloh. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
